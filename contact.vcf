@@ -1,0 +1,22 @@
+BEGIN:VCARD
+VERSION:3.0
+
+N:Ohamadike;Chidera Emmanuel;;;
+FN:Chidera Emmanuel Ohamadike
+
+ORG:Software Developer
+TITLE:Software Developer | AI/ML | Trader
+
+TEL;TYPE=CELL,VOICE:+2250701261040
+
+EMAIL;TYPE=INTERNET:ohamadikee98@gmail.com
+
+URL:https://emmasantos11.github.io/my-portfolio/
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/emmanuel-ohamadike-767195196/
+URL;TYPE=GitHub:https://github.com/EmmaSantos11
+
+ADR;TYPE=WORK:;;Abidjan;;;Côte d'Ivoire
+
+NOTE:Software Developer specializing in AI, Machine Learning, Data and Software Engineering.
+
+END:VCARD

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chidera Emmanuel Ohamadike | Digital Card</title>
+
+    <meta name="description"
+        content="Digital business card of Chidera Emmanuel Ohamadike — Software Developer, AI/ML and Trader">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            color: #111318;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 25px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 450px;
+
+            background: #ffffff;
+
+            border: 1px solid #dedede;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.12);
+
+            overflow: hidden;
+        }
+
+        /* =========================
+           TOP DESIGN
+        ========================= */
+
+        .top-design {
+            height: 120px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: #fafafa;
+        }
+
+        .shape {
+            position: absolute;
+
+            width: 260px;
+            height: 80px;
+
+            border: 18px solid #e7e7e7;
+
+            transform: rotate(42deg);
+        }
+
+        .shape-one {
+            left: -100px;
+            top: -35px;
+        }
+
+        .shape-two {
+            right: -110px;
+            top: -45px;
+        }
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        .profile {
+            text-align: center;
+
+            padding: 30px 25px 25px;
+        }
+
+        .initials {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 18px;
+
+            border: 2px solid #111318;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
+            font-weight: bold;
+
+            letter-spacing: -2px;
+        }
+
+        .small-title {
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+
+            line-height: 1.15;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .profession {
+            margin-top: 12px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+        }
+
+        .description {
+            margin: 18px auto 0;
+
+            max-width: 350px;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            color: #666;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .actions {
+            padding: 0 25px 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 11px;
+        }
+
+        .button {
+            min-height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+
+            color: #111318;
+
+            border: 1px solid #111318;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            letter-spacing: 0.5px;
+
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .button.primary {
+            background: #111318;
+
+            color: white;
+        }
+
+        .icon {
+            font-size: 18px;
+        }
+
+        /* =========================
+           CONTACT DETAILS
+        ========================= */
+
+        .details {
+            border-top: 1px solid #e5e5e5;
+
+            padding: 22px 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        .detail {
+            display: flex;
+
+            gap: 12px;
+
+            font-size: 13px;
+
+            line-height: 1.4;
+        }
+
+        .detail-icon {
+            width: 22px;
+        }
+
+        .detail-label {
+            display: block;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 3px;
+
+            color: #777;
+        }
+
+        .detail a {
+            color: #111318;
+
+            text-decoration: none;
+
+            word-break: break-word;
+        }
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .socials {
+            border-top: 1px solid #e5e5e5;
+
+            padding: 18px 20px 22px;
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+        .socials a {
+            padding: 9px 13px;
+
+            border: 1px solid #d8d8d8;
+
+            color: #111318;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            padding: 13px;
+
+            text-align: center;
+
+            border-top: 1px solid #e5e5e5;
+
+            color: #888;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            body {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .profile {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card">
+
+        <!-- Decorative design -->
+        <div class="top-design">
+
+            <div class="shape shape-one"></div>
+
+            <div class="shape shape-two"></div>
+
+        </div>
+
+
+        <!-- Profile -->
+        <section class="profile">
+
+            <div class="initials">
+                CE
+            </div>
+
+            <p class="small-title">
+                Digital Contact Card
+            </p>
+
+            <h1>
+                Chidera Emmanuel Ohamadike
+            </h1>
+
+            <p class="profession">
+                Software Developer • AI/ML • Trader
+            </p>
+
+            <p class="description">
+                I build software, AI-powered solutions and
+                data-driven systems. Explore my work,
+                save my contact, or connect with me directly.
+            </p>
+
+        </section>
+
+
+        <!-- Main Actions -->
+        <section class="actions">
+
+            <!-- Phone -->
+            <a
+                class="button primary"
+                href="tel:+2250701261040"
+            >
+                <span class="icon">☎</span>
+
+                Call Emmanuel
+            </a>
+
+
+            <!-- WhatsApp -->
+            <a
+                class="button primary"
+                href="https://wa.me/2250701261040?text=Hello%20Emmanuel%2C%20I%20scanned%20your%20business%20card."
+                target="_blank"
+            >
+                <span class="icon">💬</span>
+
+                WhatsApp Me
+            </a>
+
+
+            <!-- Save contact -->
+            <a
+                class="button"
+                href="contact.vcf"
+                download
+            >
+                <span class="icon">＋</span>
+
+                Save My Contact
+            </a>
+
+
+            <!-- Portfolio -->
+            <a
+                class="button"
+                href="https://emmasantos11.github.io/my-portfolio/"
+                target="_blank"
+            >
+                <span class="icon">⌘</span>
+
+                Explore My Portfolio
+            </a>
+
+
+            <!-- CV -->
+            <a
+                class="button"
+                href="https://emmasantos11.github.io/my-portfolio/assets/resume/Ohamadike%20Chidera%20Emmanuel.pdf"
+                target="_blank"
+            >
+                <span class="icon">▣</span>
+
+                View My CV
+            </a>
+
+        </section>
+
+
+        <!-- Contact Information -->
+        <section class="details">
+
+            <div class="detail">
+
+                <span class="detail-icon">
+                    📱
+                </span>
+
+                <div>
+
+                    <span class="detail-label">
+                        Phone / WhatsApp
+                    </span>
+
+                    <a href="tel:+2250701261040">
+                        +225 07 01 26 10 40
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-icon">
+                    ✉
+                </span>
+
+                <div>
+
+                    <span class="detail-label">
+                        Email
+                    </span>
+
+                    <a href="mailto:ohamadikee98@gmail.com">
+                        ohamadikee98@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-icon">
+                    📍
+                </span>
+
+                <div>
+
+                    <span class="detail-label">
+                        Based in
+                    </span>
+
+                    Abidjan, Côte d'Ivoire • Open to Remote
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Social Links -->
+        <nav class="socials">
+
+            <a
+                href="https://www.linkedin.com/in/emmanuel-ohamadike-767195196/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/EmmaSantos11"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://x.com/bera_santos2"
+                target="_blank"
+            >
+                X
+            </a>
+
+        </nav>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            Scan • Connect • Collaborate
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

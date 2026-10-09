@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bera Creative Studio | Company Profile</title>
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="apple-touch-icon" href="image/logo.png">
+    <meta name="description" content="Bera Creative Studio is a founder-led technology studio in Abidjan offering software development, AI solutions and digital tools.">
+
+    <style>
+        :root {
+            --ink: #111318;
+            --muted: #666;
+            --label: #777;
+            --line: #e5e5e5;
+            --shape: #e7e7e7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            color: var(--ink);
+        }
+
+        .card {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            border: 1px solid #dedede;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        /* Top decoration */
+        .top-design {
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+            background: #fafafa;
+        }
+
+        .shape {
+            position: absolute;
+            width: 260px;
+            height: 80px;
+            border: 18px solid var(--shape);
+            transform: rotate(42deg);
+        }
+        .shape-one { left: -100px; top: -35px; }
+        .shape-two { right: -110px; top: -45px; }
+
+        /* Header */
+        .hero { text-align: center; padding: 28px 25px 26px; }
+
+        .logo {
+            display: block;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 18px;
+        }
+
+        .small-title {
+            margin-bottom: 10px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.15;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .lead {
+            max-width: 350px;
+            margin: 18px auto 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+
+        /* Sections */
+        .section {
+            padding: 24px 25px;
+            border-top: 1px solid var(--line);
+        }
+
+        h2 {
+            margin-bottom: 14px;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        p { font-size: 14px; line-height: 1.65; color: var(--muted); }
+        p + p { margin-top: 10px; }
+
+        /* Services & projects */
+        .item { padding: 14px 0; border-top: 1px solid var(--line); }
+        .item:first-of-type { border-top: 0; padding-top: 0; }
+        .item:last-child { padding-bottom: 0; }
+
+        h3 {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .num {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: var(--label);
+        }
+
+        ul { margin-top: 8px; padding-left: 18px; }
+        li { font-size: 13px; line-height: 1.6; color: var(--muted); }
+
+        .tech {
+            margin-top: 8px;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--label);
+        }
+
+        .note { margin-top: 14px; font-size: 12px; color: var(--label); }
+
+        /* Process */
+        .steps { list-style: none; padding: 0; margin: 0; }
+        .steps li {
+            padding: 9px 0;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+        }
+        .steps li:first-child { border-top: 0; padding-top: 0; }
+        .steps strong { color: var(--ink); }
+
+        /* Buttons */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 0 25px 25px;
+        }
+
+        .button {
+            min-height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid var(--ink);
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: 0.2s ease;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .button.primary { background: var(--ink); color: #fff; }
+
+        .icon { font-size: 18px; }
+
+        .cta { text-align: center; }
+        .cta p { margin-bottom: 4px; }
+
+        /* Contact lines */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 14px;
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--muted);
+        }
+        .contact a { color: var(--ink); text-decoration: none; word-break: break-word; }
+
+        /* Footer */
+        .footer {
+            padding: 13px;
+            text-align: center;
+            border-top: 1px solid var(--line);
+            color: #888;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 380px) {
+            body { padding: 12px; }
+            h1 { font-size: 24px; }
+            .hero, .section { padding-left: 18px; padding-right: 18px; }
+            .actions { padding-left: 18px; padding-right: 18px; }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+
+        <div class="top-design" aria-hidden="true">
+            <div class="shape shape-one"></div>
+            <div class="shape shape-two"></div>
+        </div>
+
+        <header class="hero">
+            <img class="logo" src="image/logo.png" alt="Bera Creative Studio logo" width="75" height="75">
+            <p class="small-title">Company Profile</p>
+            <h1>Bera Creative Studio</h1>
+            <p class="tagline">Software • AI • Digital Solutions</p>
+            <p class="lead">We turn ideas into practical digital solutions.</p>
+        </header>
+
+        <section class="section">
+            <h2>About</h2>
+            <p>
+                Bera Creative Studio is a founder-led technology studio based in Abidjan,
+                Côte d'Ivoire. We build digital products and practical AI solutions for
+                businesses, entrepreneurs and individuals.
+            </p>
+            <p>
+                The studio was founded by Chidera Emmanuel Ohamadike, a software developer
+                with a focus on artificial intelligence, machine learning and data-driven
+                systems. Our approach is simple: technology should solve problems, simplify
+                processes and create room to grow.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>What We Do</h2>
+
+            <div class="item">
+                <h3><span class="num">01</span> Websites &amp; E-Commerce</h3>
+                <p>Modern, responsive websites and online stores that help businesses reach customers.</p>
+                <ul>
+                    <li>Business and portfolio websites</li>
+                    <li>Online stores, carts and checkout</li>
+                    <li>Improvements to existing sites</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3><span class="num">02</span> Custom Software &amp; Applications</h3>
+                <p>Applications built around specific business needs, with a focus on usability.</p>
+                <ul>
+                    <li>Custom web applications</li>
+                    <li>Business process tools</li>
+                    <li>Dashboards and prototypes</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3><span class="num">03</span> AI &amp; Machine Learning</h3>
+                <p>Practical uses of AI and machine learning that make digital products more useful.</p>
+                <ul>
+                    <li>AI-powered application features</li>
+                    <li>Machine learning prototypes</li>
+                    <li>Natural language processing</li>
+                    <li>AI-assisted workflows and automation</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3><span class="num">04</span> Data Analysis &amp; Business Tools</h3>
+                <p>Data-focused tools that help organise information and support better decisions.</p>
+                <ul>
+                    <li>Data processing and analysis</li>
+                    <li>Reporting and dashboards</li>
+                    <li>Digital record-keeping systems</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3><span class="num">05</span> Prompt Engineering &amp; AI Integration</h3>
+                <p>Connecting AI services to real workflows through carefully designed prompts.</p>
+                <ul>
+                    <li>Prompt design and refinement</li>
+                    <li>AI features inside applications</li>
+                    <li>Conversational assistant concepts</li>
+                </ul>
+            </div>
+
+            <p class="note">
+                The scope of each project depends on the client's requirements, available
+                data and technical feasibility.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Selected Projects</h2>
+
+            <div class="item">
+                <h3>Forex Trading Bot</h3>
+                <p>
+                    A development project exploring market analysis and algorithmic trading,
+                    with trading strategies, model-based analysis, and a Telegram bot and
+                    dashboard to interact with the system.
+                </p>
+                <p class="tech">Python · Machine Learning · MetaTrader 5 · Telegram</p>
+            </div>
+
+            <div class="item">
+                <h3>E-Commerce Platform</h3>
+                <p>
+                    A web application with a storefront and admin side, covering product
+                    browsing, a shopping cart and checkout.
+                </p>
+                <p class="tech">Next.js · Supabase · Vercel</p>
+            </div>
+
+            <p class="note">
+                These are project examples that show our technical work. More work is
+                available in the portfolio.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>How We Work</h2>
+            <ol class="steps">
+                <li><strong>Discover.</strong> Understand the idea, the users and the challenges.</li>
+                <li><strong>Plan.</strong> Choose a practical approach and the essential features.</li>
+                <li><strong>Build.</strong> Develop the solution with care for function and detail.</li>
+                <li><strong>Refine.</strong> Test, review and improve based on feedback.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Who We Work With</h2>
+            <ul>
+                <li>Small and growing businesses</li>
+                <li>Startups and entrepreneurs</li>
+                <li>Individuals developing digital products</li>
+                <li>Organisations improving their digital workflows</li>
+            </ul>
+            <p style="margin-top: 12px;">
+                We are especially interested in what software, AI and data can do for small
+                businesses and emerging markets.
+            </p>
+        </section>
+
+        <section class="section cta">
+            <h2>Let's Build Something</h2>
+            <p>
+                Have a website to develop, an app idea, or a business challenge to solve?
+                Let's talk about what you want to build.
+            </p>
+
+            <div class="contact">
+                <span>Chidera Emmanuel Ohamadike, Founder &amp; Lead Developer</span>
+                <span>Abidjan, Côte d'Ivoire</span>
+                <a href="mailto:ohamadikee98@gmail.com">ohamadikee98@gmail.com</a>
+                <a href="tel:+2250701261040">+225 07 01 26 10 40</a>
+            </div>
+        </section>
+
+        <section class="actions">
+            <a class="button primary" target="_blank" rel="noopener"
+               href="https://wa.me/2250701261040?text=Hello%20Bera%20Creative%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.">
+                <span class="icon">💬</span> Start a Project on WhatsApp
+            </a>
+
+            <a class="button" target="_blank" rel="noopener"
+               href="https://emmasantos11.github.io/my-portfolio/">
+                <span class="icon">⌘</span> View the Portfolio
+            </a>
+
+            <a class="button" href="index.html">
+                <span class="icon">←</span> Back to Digital Card
+            </a>
+        </section>
+
+        <footer class="footer">Practical technology • Thoughtful solutions</footer>
+
+    </main>
+</body>
+</html>
